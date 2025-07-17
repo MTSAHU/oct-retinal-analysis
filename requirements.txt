@@ -1,7 +1,10 @@
-numpy
+streamlit
+numpy>=1.26,<2.2
 pandas
-tensorflow
+tensorflow==2.19.0
 matplotlib
 seaborn
 scikit-learn
 pickle-mixin
+folium
+streamlit-folium
