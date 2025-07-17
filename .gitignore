@@ -1,0 +1,23 @@
+# Ignore streamlit folder
+streamlit/
+# Python cache and environment
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+# Model and data files
+*.h5
+*.keras
+*.pkl
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+# Log files
+*.log
+# Other temporary files
+*.tmp
