@@ -8,3 +8,4 @@ scikit-learn
 pickle-mixin
 folium
 streamlit-folium
+googlemaps
