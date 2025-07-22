@@ -5,6 +5,7 @@ import numpy as np
 import tempfile
 import os
 import base64
+import requests
 
 import googlemaps
 import folium
@@ -35,6 +36,25 @@ if not GOOGLE_PLACES_API_KEY:
 else:
     gmaps = googlemaps.Client(key=GOOGLE_PLACES_API_KEY)
 
+
+# import model
+
+import requests
+
+def download_model_if_missing(url, local_path):
+    if not os.path.exists(local_path):
+        print(f"Downloading model from {url} ...")
+        response = requests.get(url, stream=True)
+        response.raise_for_status()
+        with open(local_path, 'wb') as f:
+            for chunk in response.iter_content(chunk_size=8192):
+                f.write(chunk)
+        print(f"Downloaded {local_path}")
+
+# Use the provided GitHub Releases link for the model
+MODEL_URL = "https://github.com/MTSAHU/oct-retinal-analysis/releases/download/v1.0-models/Trained_Model.keras"
+MODEL_PATH = "Trained_Model.keras"
+download_model_if_missing(MODEL_URL, MODEL_PATH)
 
 # --- Caching Helpers ---
 @st.cache_resource
