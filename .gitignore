@@ -1,23 +1,58 @@
-# Ignore streamlit folder
-streamlit/
-# Python cache and environment
+# ================================
+# Python / FastAPI
+# ================================
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
 *.pyd
 .env
 venv/
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints/
-# Model and data files
+tfenv/
+.env.*
+*.sqlite3
+
+# ================================
+# Machine Learning Models & Data
+# ================================
 *.h5
 *.keras
 *.pkl
-# OS and editor files
+*.joblib
+data/
+datasets/
+
+# ================================
+# Jupyter / Experiments
+# ================================
+.ipynb_checkpoints/
+notebooks/
+experiments/
+
+# ================================
+# Logs & temp files
+# ================================
+*.log
+*.tmp
+*.cache
+
+# ================================
+# OS / Editor
+# ================================
 .DS_Store
 Thumbs.db
 .vscode/
-# Log files
-*.log
-# Other temporary files
-*.tmp
+.idea/
+
+# ================================
+# React / Frontend (future)
+# ================================
+frontend/node_modules/
+frontend/build/
+frontend/.env
+frontend/.env.*
+
+# ================================
+# Dev Containers
+# ================================
+.devcontainer/
+tfenv/

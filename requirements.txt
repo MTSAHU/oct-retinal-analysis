@@ -4,6 +4,8 @@ pillow
 numpy>=1.26,<2.2
 numpy
 python-multipart
+requests
+python-dotenv
 
 
 
